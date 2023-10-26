@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp apis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/feae6c3d99.js" crossorigin="anonymous"></script>
+</head>
+<!--Barra de navegación-->
+<header>
+    <nav class="navbar" has-shadow is-spaced is-primary role="navigation">
+        <a class="has-text-black m-4"> 
+            Careers 
+        </a>
+        <a class="has-text-black m-4">
+            Home 
+        </a>
+        <a id="crear" class="has-text-black m-4"> 
+            Create Job 
+        </a>
+    </nav>
+</header>
+<body>
+ <main>
+    <section id="list-jobs" class="view is-hidden">
+  <div class="columns"> 
+    <form> 
+        <label> 
+            <select id="location">
+                <option disabled selected> 
+                    Location 
+                </option>
+                <option>
+                    Brasil 
+                </option>
+                <option>
+                    Argentina 
+                </option>
+                <option>
+                    Estados Unidos 
+                </option>
+            </select>
+            <select id="seniority">
+                <option disabled selected> Seniority </option>
+            </select>
+            <select id="category"> 
+                <option disabled selected> Category </option>
+            </select>
+        </label>
+    </form>
+    <!--</div>-->
+    <!--<div class="columns is-multiline mt-10">-->
+        <button id="add-operation" class="button is-success is-one-quarter"> 
+            Search 
+        </button>
+        <button id="cancel-operation" class="button is-light is-one-quarter">
+            Clear 
+        </button>
+        
+  </div>
+    </section>
+    <section id="create-job" class="view is-hidden">
+        <div class="new-job"> 
+            <form id="form-text"> 
+                <label>
+                    <h2 class="column has-text-black"> Job tittle </h2>
+                    <input id="job-title" type="text" placeholder="Job title">
+                </label>
+            </br>
+                <label> 
+                    <h2> Description </h2>
+                    <textarea id="description" cols="35" rows="5"   placeholder="Description"></textarea>
+                </label>
+            <label>
+                <h2> Tags </h2>
+                <input id="tags" type="text" placeholder="Location">
+            </br>
+                <input id="tags" type="text" placeholder="Seniority">
+            </br>
+                <input id="tags" type="text" placeholder="Category">
+            </label>
+        </form>
+        <div class="boton">
+        <button id="add-operation" class="button is-success is-one-quarter"> 
+            Submit
+        </button>
+        </div>
+        </div>
+    </section>
+    <section id="edit-job" class="view"> </section>
+    <section id="delete-job" class="view"> </section>
+    <!--<span id="loading" class="loader-view is-hidden"></span> -->
+    <script src="./js/main.js"></script>
+    <script src="./js/api.js"></script>
+ </main>
+</body>
+</html>
