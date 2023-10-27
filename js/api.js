@@ -1,5 +1,5 @@
 getJobs = async () => {
-    seeView("loading");
+    //seeView("loading");
 let response = await fetch (
     "https://653809a8a543859d1bb12bb1.mockapi.io/careers/api/Jobs"
 );
@@ -29,10 +29,11 @@ for (let trabajos of trabajos) {
     `;
 };
 };
-  getJobs ();
+getJobs ();
+
 // setTimeout(() => { 
-//     renderJobs(data);
-// }, 3000);
+//    renderJobs(data);
+//  }, 3000);
 
 // renderJobs = (jobs) => {
 //         console.log(jobs);

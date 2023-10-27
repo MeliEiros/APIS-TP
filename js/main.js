@@ -6,15 +6,10 @@ $$(".view").forEach((view) => view.classList.add("is-hidden"));
 $(`#${vistaAMostrar}`).classList.remove("is-hidden");
 };
 
-$("#list-jobs").addEventListener("click", () =>
-    vistaAMostrar("seeView")
-);
+$("#trabajos").addEventListener("click", () => 
+    seeView("list-jobs"));
 
-$("#create-job").addEventListener("click", () => 
-    vistaAMostrar("Seeview")
-);
-
-
+$("#crear").addEventListener("click", () => seeView("create-job"));
 
 
 renderJobs = (jobs) => {
